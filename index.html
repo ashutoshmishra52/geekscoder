@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Arron Hunt</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="void" id="void">
+    <div class="crop">
+      <ul id="card-list" style="--count: 4;">
+        <li>
+          <div class="card">
+            <a href="https://www.youtube.com/channel/UCjLW6ONaRwqP-2F4ocgydUg">
+              <span class="model-name">YouTube</span>
+              <span>A YouTube account content is a web developer and machine learning.</span>
+              <button class="open-link-btn">Open YT channel</button>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <a href="https://www.instagram.com/geekscoder.52/">
+              <span class="model-name">Geekscoder.52</span>
+              <span>An Instagram account content is a web developer and machine learning.</span>
+              <button class="open-link-btn">Open Instagram</button>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <a href="https://www.instagram.com/ashutoshmishra.52/">
+              <span class="model-name">ashutoshmishra.52</span>
+              <span>An Instagram account content is a web developer and machine learning</span>
+              <button class="open-link-btn">Open Instagram</button>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <a href="https://web.telegram.org/k/#-1967578530">
+              <span class="model-name">geekscoder telegram channel</span>
+              <span>A Telegram account content is a web developer and machine learning.</span>
+              <button class="open-link-btn">Open Telegram</button>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="mask"></div>
+    <div class="center-circle">
+      <img src="d:\circle landing page\PXL_20231017_094627310.MP~2.png" alt="Center Photo">
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var openLinkButtons = document.querySelectorAll('.open-link-btn');
+
+      openLinkButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          var parentAnchor = button.closest('a');
+          var linkToOpen = parentAnchor.getAttribute('href');
+
+          window.open(linkToOpen, '_blank');
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
